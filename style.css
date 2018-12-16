@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body{
+      font-family: 'Space Mono', monospace;
+      background: url('mars.png') no-repeat top;
+      color: #fff;
+}
+
+header{
+      padding: 50px 0;
+      text-align: center;
+}
+
+header img{
+      width: 50%;
+}
+
+.search{
+      font-size: 60px;
+      text-align: center;
+}
+
+.search strong{
+      cursor: pointer;
+      border-bottom: 2px dotted #fff;
+}
+
+.dropdown{
+      font-size: 30px;
+      position: absolute;
+      width: 25%;
+      color: #222;
+      opacity: 0;
+      background: #eee;
+      border-radius: 5px;
+      transform: scale(0);
+      
+      transition: 300ms;
+}
+
+.dropdown .dropdown-item{
+      background: #fff;
+      cursor: pointer;
+      padding: 10px 0;
+      border-radius: 5px;
+      margin: 1px 0;
+}
+
+.dropdown .dropdown-item:hover{
+      background: #eee;
+}
+
+#loading-spinner{
+      width: 150px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 35%;
+      display: none;
+      animation: load 3s linear infinite;
+}
+
+@keyframes load{
+      0%{
+            transform: rotateZ(0);
+      }
+
+      100%{
+            transform: rotateZ(360deg);
+      }
+}
+
+@media (max-width: 1000px){
+      .dropdown{
+            width: 95%;
+            left: 0 !important;
+            right: 0;
+            margin: 0 auto;
+            font-size: 20px;
+      }
+
+      .search{
+            display: flex;
+            flex-direction: column;
+            font-size: 50px;
+      }
+
+      .search strong{
+            cursor: initial;
+            width: 80%;
+            align-self: center;
+      }
+}
