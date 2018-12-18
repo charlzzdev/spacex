@@ -4,12 +4,27 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      outline: 0;
 }
 
 body{
       font-family: 'Space Mono', monospace;
-      background: url('mars.png') no-repeat top;
+      background: url('mars.png') no-repeat top #000;
       color: #fff;
+}
+
+::-webkit-scrollbar{
+      background: transparent;
+      width: 3px;
+}
+
+::-webkit-scrollbar-thumb{
+      background: #fff;
+}
+
+a{
+      color: #c18871;
+      margin-right: 1.5rem;
 }
 
 header{
@@ -17,7 +32,7 @@ header{
       text-align: center;
 }
 
-header img{
+.spacex-logo{
       width: 50%;
 }
 
@@ -77,6 +92,38 @@ header img{
       }
 }
 
+.result{
+      width: 60vw;
+      margin: 0 auto;
+}
+
+.rocket{
+      padding: 1rem;
+      margin: 1rem 0;
+      background: rgba(34, 34, 34, 0.568);
+      float: right;
+      width: 100%;
+}
+
+.mission-patch{
+      float: right;
+}
+
+.date{
+      font-size: 0.7rem;
+      color: rgb(190, 190, 190);
+}
+
+.rocket h1{
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+}
+
+.rocket h2{
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+}
+
 @media (max-width: 1000px){
       .dropdown{
             width: 95%;
@@ -96,5 +143,14 @@ header img{
             cursor: initial;
             width: 80%;
             align-self: center;
+      }
+
+      .result{
+            width: 95vw;
+            margin: 0 auto;
+      }
+
+      .mission-patch{
+            width: 100px;
       }
 }
